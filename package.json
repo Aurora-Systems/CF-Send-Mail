@@ -1,0 +1,28 @@
+{
+  "name": "cf-send-mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aurora-Systems/CF-Send-Mail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aurora-Systems/CF-Send-Mail/issues"
+  },
+  "homepage": "https://github.com/Aurora-Systems/CF-Send-Mail#readme",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mailersend": "^2.2.0"
+  }
+}
