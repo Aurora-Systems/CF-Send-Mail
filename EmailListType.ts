@@ -4,23 +4,23 @@ const mailerSend = new MailerSend({
   apiKey: process.env.API_KEY,
 });
 
-export const WelcomeEmail=()=>{
-const sentFrom = new Sender("you@yourdomain.com", "Your name");
+export const WelcomeEmail = (name:string,email:string) => {
+  const sentFrom = new Sender("you@yourdomain.com", "Your name");
 
-const recipients = [
-  new Recipient("your@client.com", "Your Client")
-];
+  const recipients = [
+    new Recipient(email, name)
+  ];
 
-const emailParams = new EmailParams()
-  .setFrom(sentFrom)
-  .setTo(recipients)
-  .setReplyTo(sentFrom)
-  .setSubject("This is a Subject")
-  .setTemplateId('templateId');
+  const emailParams = new EmailParams()
+    .setFrom(sentFrom)
+    .setTo(recipients)
+    .setReplyTo(sentFrom)
+    .setSubject("Application Reminder")
+    .setTemplateId(process.env.TEMP_ID);
 
-mailerSend.email.send(emailParams).then(res=>{
+  mailerSend.email.send(emailParams).then(res => {
 
-}).catch(err=>{
-    
-})
+  }).catch(err => {
+
+  })
 }
